@@ -81,6 +81,19 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 passoNumbers.forEach(el => counterObserver.observe(el));
 
+// ===== LAZY LOAD IFRAME (Google Maps) =====
+const lazyIframes = document.querySelectorAll('iframe[data-src]');
+const iframeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const iframe = entry.target;
+            iframe.src = iframe.dataset.src;
+            iframeObserver.unobserve(iframe);
+        }
+    });
+}, { rootMargin: '200px' });
+lazyIframes.forEach(iframe => iframeObserver.observe(iframe));
+
 // ===== 3D TILT EFFECT ON BENEFICIO CARDS =====
 const beneficioCards = document.querySelectorAll('.beneficio');
 
