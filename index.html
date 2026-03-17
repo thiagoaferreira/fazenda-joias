@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N3SZJLC6');</script>
+    <!-- Google Tag Manager - delayed load -->
+    <script>window.addEventListener('load',function(){setTimeout(function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N3SZJLC6');},1500);});</script>
     <!-- End Google Tag Manager -->
     <title>Fazenda Joias | Compramos Ouro e Prata com Pagamento Imediato</title>
     <meta name="description" content="Venda seu ouro e prata com avaliação gratuita e pagamento na hora. Dinheiro ou PIX. Loja na Lapa, São Paulo.">
@@ -26,7 +22,8 @@
     <link rel="icon" type="image/png" href="img/logo-circular-sm.png">
 
     <!-- Preload hero image (LCP) -->
-    <link rel="preload" as="image" href="img/hero-bg.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="img/hero-bg-mobile.jpg" media="(max-width:768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="img/hero-bg.jpg" media="(min-width:769px)" fetchpriority="high">
 
     <!-- Google Fonts - display swap para não bloquear render -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,7 +104,7 @@
     <header class="header" id="header">
         <div class="container header__container">
             <a href="#" class="header__logo">
-                <img src="img/logo-sm.png" alt="Fazenda Joias" class="header__logo-img" width="50" height="50">
+                <img src="img/logo-sm.jpg" alt="Fazenda Joias" class="header__logo-img" width="50" height="50">
                 <span class="header__logo-text">Fazenda Joias</span>
             </a>
             <a href="https://wa.me/5511919546760?text=Olá, vim pelo site! Gostaria de avaliar meu ouro." class="btn btn--primary header__cta" target="_blank" rel="noopener">
@@ -203,7 +200,7 @@
             <div class="passos__grid">
                 <div class="passo reveal reveal--delay-1">
                     <div class="passo__img-wrapper">
-                        <img src="img/passo-1.jpg" alt="Avaliação Gratuita" class="passo__img" width="320" height="180" loading="lazy">
+                        <img src="img/passo-1.jpg" alt="Avaliação Gratuita" class="passo__img" width="320" height="180" loading="lazy" srcset="img/passo-1-mobile.jpg 665w, img/passo-1.jpg 1080w" sizes="(max-width:768px) 100vw, 320px">
                     </div>
                     <div class="passo__body">
                         <div class="passo__number">01</div>
@@ -218,7 +215,7 @@
                 </div>
                 <div class="passo reveal reveal--delay-2">
                     <div class="passo__img-wrapper">
-                        <img src="img/passo-2.jpg" alt="Proposta Sem Compromisso" class="passo__img" width="320" height="180" loading="lazy">
+                        <img src="img/passo-2.jpg" alt="Proposta Sem Compromisso" class="passo__img" width="320" height="180" loading="lazy" srcset="img/passo-2-mobile.jpg 665w, img/passo-2.jpg 1080w" sizes="(max-width:768px) 100vw, 320px">
                     </div>
                     <div class="passo__body">
                         <div class="passo__number">02</div>
@@ -233,7 +230,7 @@
                 </div>
                 <div class="passo reveal reveal--delay-3">
                     <div class="passo__img-wrapper">
-                        <img src="img/passo-3.jpg" alt="Pagamento na Hora" class="passo__img" width="320" height="180" loading="lazy">
+                        <img src="img/passo-3.jpg" alt="Pagamento na Hora" class="passo__img" width="320" height="180" loading="lazy" srcset="img/passo-3-mobile.jpg 665w, img/passo-3.jpg 1080w" sizes="(max-width:768px) 100vw, 320px">
                     </div>
                     <div class="passo__body">
                         <div class="passo__number">03</div>
@@ -339,7 +336,7 @@
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__brand">
-                <img src="img/logo-sm.png" alt="Fazenda Joias" class="footer__logo" width="50" height="50" loading="lazy">
+                <img src="img/logo-sm.jpg" alt="Fazenda Joias" class="footer__logo" width="50" height="50" loading="lazy">
                 <span class="footer__name">Fazenda Joias</span>
             </div>
             <div class="footer__info">

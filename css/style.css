@@ -842,6 +842,14 @@ address {
 
 /* Tablet Portrait (max 768px) */
 @media (max-width: 768px) {
+    .hero__bg {
+        background-image: url('../img/hero-bg-mobile.jpg');
+    }
+
+    .compramos {
+        background-image: url('../img/compramos-bg-mobile.jpg');
+    }
+
     .container {
         padding: 0 20px;
     }
