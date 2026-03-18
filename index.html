@@ -37,9 +37,11 @@
 
     <!-- Critical CSS inline -->
     <style>
+        @font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
+        @font-face{font-family:'Montserrat Fallback';src:local('Arial Black');size-adjust:112%;ascent-override:85%;descent-override:22%;line-gap-override:0%}
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;scroll-padding-top:80px}
-        body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#0A0A0A;color:#fff;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        body{font-family:'Inter','Inter Fallback',system-ui,-apple-system,sans-serif;background:#0A0A0A;color:#fff;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
         img{max-width:100%;height:auto;display:block}
         a{text-decoration:none;color:inherit}
         ul{list-style:none}
@@ -49,21 +51,27 @@
         .header__container{display:flex;align-items:center;justify-content:space-between}
         .header__logo{display:flex;align-items:center;gap:12px}
         .header__logo-img{height:50px;width:auto}
-        .header__logo-text{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:800}
+        .header__logo-text{font-family:'Montserrat','Montserrat Fallback',sans-serif;font-size:1.4rem;font-weight:800}
         .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-size:1rem;font-weight:600;cursor:pointer;transition:.3s;border:2px solid transparent;white-space:nowrap}
         .btn--primary{background:#F5C518;color:#0A0A0A;border-color:#F5C518}
         .header__cta{padding:10px 24px;font-size:.95rem}
         .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
         .hero__bg{position:absolute;inset:0;background:url('img/hero-bg-mobile.jpg') center/cover no-repeat}
         @media(min-width:769px){.hero__bg{background-image:url('img/hero-bg.jpg')}}
-        .hero__overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.7) 50%,rgba(10,10,10,.4) 100%)}
-        .hero__container{position:relative;z-index:2;padding:250px 24px 80px}
+        .hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.75) 50%,rgba(10,10,10,.6) 100%)}
+        @media(min-width:769px){.hero__overlay{background:linear-gradient(135deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.7) 50%,rgba(10,10,10,.4) 100%)}}
+        .hero__container{position:relative;z-index:2;padding:140px 24px 80px}
         .hero__content{max-width:650px}
-        .hero__title{font-family:'Montserrat',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.15;margin-bottom:20px}
+        .hero__title{font-family:'Montserrat','Montserrat Fallback',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.15;margin-bottom:20px}
+        .hero__subtitle{font-size:clamp(1rem,2vw,1.2rem);color:#bbb;margin-bottom:32px;max-width:540px}
+        .hero__ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+        .hero__badges{display:flex;gap:24px;flex-wrap:wrap}
         .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
         .reveal.active{opacity:1;transform:translateY(0)}
         .hero .reveal{opacity:1;transform:none}
-        @media(max-width:420px){.hero__container{padding-top:100px!important}.header__logo-img{height:32px}.header__logo-text{font-size:.9rem}}
+        @media(max-width:768px){.hero__container{padding:250px 20px 60px}.hero__content{max-width:100%}.hero__overlay{background:linear-gradient(180deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.75) 50%,rgba(10,10,10,.6) 100%)}.hero__ctas{flex-direction:column}.hero__ctas .btn{justify-content:center;width:100%}.hero__badges{gap:12px}.header__logo-img{height:42px}.header__cta{padding:8px 18px;font-size:.85rem}}
+        @media(max-width:600px){.hero__container{padding:250px 16px 50px}.hero__badges{flex-direction:column}.badge{justify-content:center}.header__logo-img{height:36px}}
+        @media(max-width:420px){.hero__container{padding-top:100px!important}.hero__title{font-size:1.8rem}.hero__subtitle{font-size:.95rem}.header__logo-img{height:32px}.header__logo-text{font-size:.9rem}.header__cta{padding:8px 14px;font-size:.8rem;gap:4px}}
     </style>
 
     <!-- Full CSS - non-blocking -->
